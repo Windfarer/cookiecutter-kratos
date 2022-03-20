@@ -1,0 +1,38 @@
+# Generated with protoc-gen-openapi
+# https://github.com/google/gnostic/tree/master/cmd/protoc-gen-openapi
+
+openapi: 3.0.3
+info:
+    title: {{cookiecutter.service_name}} API
+    description: The greeting service definition.
+    version: 0.0.1
+paths:
+    /helloworld/{name}:
+        get:
+            tags:
+                - {{cookiecutter.service_name}}
+            description: Sends a greeting
+            operationId: {{cookiecutter.service_name}}_SayHello
+            parameters:
+                - name: name
+                  in: path
+                  required: true
+                  schema:
+                    type: string
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/.helloworld.v1.HelloReply'
+components:
+    schemas:
+        .helloworld.v1.HelloReply:
+            type: object
+            properties:
+                message:
+                    type: string
+            description: The response message containing the greetings
+tags:
+    - name: {{cookiecutter.service_name}}
