@@ -1,4 +1,4 @@
-# Kratos Project Template
+# {{cookiecutter.repo_name}}
 
 ## Install Kratos
 ```
