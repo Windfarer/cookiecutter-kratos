@@ -1,7 +1,7 @@
 package server
 
 import (
-	v1 "{{cookiecutter.module_name}}/api/helloworld/v1"
+	v1 "{{cookiecutter.module_name}}/api/{{cookiecutter.repo_name}}/v1"
 	"{{cookiecutter.module_name}}/internal/conf"
 	"{{cookiecutter.module_name}}/internal/service"
 	"github.com/go-kratos/kratos/v2/log"

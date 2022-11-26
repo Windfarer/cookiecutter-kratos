@@ -3,7 +3,7 @@ package biz
 import (
 	"context"
 
-	v1 "{{cookiecutter.module_name}}/api/helloworld/v1"
+	v1 "{{cookiecutter.module_name}}/api/{{cookiecutter.repo_name}}/v1"
 	"github.com/go-kratos/kratos/v2/errors"
 	"github.com/go-kratos/kratos/v2/log"
 )

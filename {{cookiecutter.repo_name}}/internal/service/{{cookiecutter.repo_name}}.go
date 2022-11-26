@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 
-	v1 "{{cookiecutter.module_name}}/api/helloworld/v1"
+	v1 "{{cookiecutter.module_name}}/api/{{cookiecutter.repo_name}}/v1"
 	"{{cookiecutter.module_name}}/internal/biz"
 )
 
@@ -19,7 +19,7 @@ func New{{cookiecutter.service_name}}Service(uc *biz.{{cookiecutter.service_name
 	return &{{cookiecutter.service_name}}Service{uc: uc}
 }
 
-// SayHello implements helloworld.{{cookiecutter.service_name}}Server.
+// SayHello implements {{cookiecutter.repo_name}}.{{cookiecutter.service_name}}Server.
 func (s *{{cookiecutter.service_name}}Service) SayHello(ctx context.Context, in *v1.HelloRequest) (*v1.HelloReply, error) {
 	g, err := s.uc.Create{{cookiecutter.service_name}}(ctx, &biz.{{cookiecutter.service_name}}{Hello: in.Name})
 	if err != nil {
